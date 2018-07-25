@@ -8,12 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		DA8071AC20FBD4D700FAEFE5 /* HyProgressHUB.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8071AA20FBD4D700FAEFE5 /* HyProgressHUB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA8071B420FBD50100FAEFE5 /* animat-checkmark-color.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA8071B220FBD50000FAEFE5 /* animat-checkmark-color.gif */; };
+		DA8071B520FBD50100FAEFE5 /* Spinner-1s-200px.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA8071B320FBD50100FAEFE5 /* Spinner-1s-200px.gif */; };
+		DA8071B820FBD50E00FAEFE5 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8071B620FBD50E00FAEFE5 /* UIImage+Gif.swift */; };
+		DAC192C221087A290058B1C8 /* HyProgressHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC192BF21087A290058B1C8 /* HyProgressHub.swift */; };
+		DAC192C321087A290058B1C8 /* HyProgressHub+Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC192C021087A290058B1C8 /* HyProgressHub+Dismiss.swift */; };
+		DAC192C421087A290058B1C8 /* HyProgressHub+ShowProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC192C121087A290058B1C8 /* HyProgressHub+ShowProgress.swift */; };
+		DAC192E9210892F90058B1C8 /* animat-pencil-color.gif in Resources */ = {isa = PBXBuildFile; fileRef = DAC192E8210892F90058B1C8 /* animat-pencil-color.gif */; };
+		DACDB3542108998600B7656E /* animat-rocket-color.gif in Resources */ = {isa = PBXBuildFile; fileRef = DACDB3532108998600B7656E /* animat-rocket-color.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA8071A720FBD4D700FAEFE5 /* HyProgressHUB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HyProgressHUB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8071AA20FBD4D700FAEFE5 /* HyProgressHUB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HyProgressHUB.h; sourceTree = "<group>"; };
 		DA8071AB20FBD4D700FAEFE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA8071B220FBD50000FAEFE5 /* animat-checkmark-color.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animat-checkmark-color.gif"; sourceTree = "<group>"; };
+		DA8071B320FBD50100FAEFE5 /* Spinner-1s-200px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Spinner-1s-200px.gif"; sourceTree = "<group>"; };
+		DA8071B620FBD50E00FAEFE5 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		DAC192BF21087A290058B1C8 /* HyProgressHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HyProgressHub.swift; sourceTree = "<group>"; };
+		DAC192C021087A290058B1C8 /* HyProgressHub+Dismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HyProgressHub+Dismiss.swift"; sourceTree = "<group>"; };
+		DAC192C121087A290058B1C8 /* HyProgressHub+ShowProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HyProgressHub+ShowProgress.swift"; sourceTree = "<group>"; };
+		DAC192E8210892F90058B1C8 /* animat-pencil-color.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animat-pencil-color.gif"; sourceTree = "<group>"; };
+		DACDB3532108998600B7656E /* animat-rocket-color.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animat-rocket-color.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +46,7 @@
 		DA80719D20FBD4D700FAEFE5 = {
 			isa = PBXGroup;
 			children = (
+				DAC192E8210892F90058B1C8 /* animat-pencil-color.gif */,
 				DA8071A920FBD4D700FAEFE5 /* HyProgressHUB */,
 				DA8071A820FBD4D700FAEFE5 /* Products */,
 			);
@@ -46,8 +63,15 @@
 		DA8071A920FBD4D700FAEFE5 /* HyProgressHUB */ = {
 			isa = PBXGroup;
 			children = (
+				DACDB3532108998600B7656E /* animat-rocket-color.gif */,
+				DA8071B220FBD50000FAEFE5 /* animat-checkmark-color.gif */,
+				DA8071B320FBD50100FAEFE5 /* Spinner-1s-200px.gif */,
 				DA8071AA20FBD4D700FAEFE5 /* HyProgressHUB.h */,
 				DA8071AB20FBD4D700FAEFE5 /* Info.plist */,
+				DA8071B620FBD50E00FAEFE5 /* UIImage+Gif.swift */,
+				DAC192BF21087A290058B1C8 /* HyProgressHub.swift */,
+				DAC192C021087A290058B1C8 /* HyProgressHub+Dismiss.swift */,
+				DAC192C121087A290058B1C8 /* HyProgressHub+ShowProgress.swift */,
 			);
 			path = HyProgressHUB;
 			sourceTree = "<group>";
@@ -95,6 +119,7 @@
 				TargetAttributes = {
 					DA8071A620FBD4D700FAEFE5 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -120,6 +145,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8071B420FBD50100FAEFE5 /* animat-checkmark-color.gif in Resources */,
+				DAC192E9210892F90058B1C8 /* animat-pencil-color.gif in Resources */,
+				DACDB3542108998600B7656E /* animat-rocket-color.gif in Resources */,
+				DA8071B520FBD50100FAEFE5 /* Spinner-1s-200px.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8071B820FBD50E00FAEFE5 /* UIImage+Gif.swift in Sources */,
+				DAC192C321087A290058B1C8 /* HyProgressHub+Dismiss.swift in Sources */,
+				DAC192C421087A290058B1C8 /* HyProgressHub+ShowProgress.swift in Sources */,
+				DAC192C221087A290058B1C8 /* HyProgressHub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,8 +221,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -245,8 +279,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				NEW_SETTING = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -259,6 +294,8 @@
 		DA8071B020FBD4D700FAEFE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = marker;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -268,14 +305,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = HyProgressHUB/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CFLAGS = "-fembed-bitcode-marker";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyer.real.HyProgressHUB;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +324,8 @@
 		DA8071B120FBD4D700FAEFE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -293,11 +335,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = HyProgressHUB/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyer.real.HyProgressHUB;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
