@@ -44,10 +44,18 @@ extension HyProgressHUB {
                 progressImage.frame = CGRect(x: view.center.x - 40, y: view.center.y - 40, width: 80.0, height: 80.0)
                 progressImage.tag = 1700110034
             } else {
-                
                 progressImage.image = UIImage.gif(name: "animat-pencil-color", bundle: Bundle(for: HyProgressHUB.self))
-                print("framework HyProgressHUB.self")
-                print(HyProgressHUB.self)
+                progressImage.frame = CGRect(x: view.center.x - 40, y: view.center.y - 40, width: 80.0, height: 80.0)
+                progressImage.tag = 1700110034
+            }
+            
+            ///lottie
+            if setLoadingLottie != nil {
+                lottieAnimationView = setLoadingLottie
+                lottieAnimationView?.frame = CGRect(x: view.center.x - 40, y: view.center.y - 40, width: 80.0, height: 80.0)
+                lottieAnimationView?.tag = 1700110038
+            } else {
+                progressImage.image = UIImage.gif(name: "animat-pencil-color", bundle: Bundle(for: HyProgressHUB.self))
                 progressImage.frame = CGRect(x: view.center.x - 40, y: view.center.y - 40, width: 80.0, height: 80.0)
                 progressImage.tag = 1700110034
             }
@@ -135,6 +143,12 @@ extension HyProgressHUB {
                         view.addSubview(self.littleSpinner)
                     case .gif:
                         view.addSubview(progressImage)
+                    case .lottie:
+                        if self.lottieAnimationView != nil {
+                            view.addSubview(self.lottieAnimationView!)
+                        } else {
+                            view.addSubview(progressImage)
+                        }
                     case .progressCircle:
                         self.showCircleProgressIndicator = true
                         view.layer.addSublayer(progressShapeLayer)

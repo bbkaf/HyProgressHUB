@@ -9,9 +9,9 @@
 import UIKit
 import ImageIO
 
-extension UIImageView {
+internal extension UIImageView {
     
-    public func loadGif(name: String) {
+    internal func loadGif(name: String) {
         DispatchQueue.global().async {
             let image = UIImage.gif(name: name)
             DispatchQueue.main.async {
@@ -21,7 +21,7 @@ extension UIImageView {
     }
     
     @available(iOS 9.0, *)
-    public func loadGif(asset: String) {
+    internal func loadGif(asset: String) {
         DispatchQueue.global().async {
             let image = UIImage.gif(asset: asset)
             DispatchQueue.main.async {
@@ -32,9 +32,9 @@ extension UIImageView {
     
 }
 
-extension UIImage {
+internal extension UIImage {
     
-    public class func gif(data: Data) -> UIImage? {
+    internal class func gif(data: Data) -> UIImage? {
         // Create source from data
         guard let source = CGImageSourceCreateWithData(data as CFData, nil) else {
             print("SwiftGif: Source for the image does not exist")
@@ -44,7 +44,7 @@ extension UIImage {
         return UIImage.animatedImageWithSource(source)
     }
     
-    public class func gif(url: String) -> UIImage? {
+    internal class func gif(url: String) -> UIImage? {
         // Validate URL
         guard let bundleURL = URL(string: url) else {
             print("SwiftGif: This image named \"\(url)\" does not exist")
@@ -59,7 +59,7 @@ extension UIImage {
         
         return gif(data: imageData)
     }
-    public class func gif(name: String, bundle: Bundle) -> UIImage? {
+    internal class func gif(name: String, bundle: Bundle) -> UIImage? {
         guard let bundleURL = bundle
             .url(forResource: name, withExtension: "gif") else {
                 print("SwiftGif: This image named \"\(name)\" does not exist")
@@ -74,7 +74,7 @@ extension UIImage {
         
         return gif(data: imageData)
     }
-    public class func gif(name: String) -> UIImage? {
+    internal class func gif(name: String) -> UIImage? {
         // Check for existance of gif.main.url
         guard let bundleURL = Bundle.main
             .url(forResource: name, withExtension: "gif") else {
@@ -92,7 +92,7 @@ extension UIImage {
     }
     
     @available(iOS 9.0, *)
-    public class func gif(asset: String) -> UIImage? {
+    internal class func gif(asset: String) -> UIImage? {
         // Create source from assets catalog
         guard let dataAsset = NSDataAsset(name: asset) else {
             print("SwiftGif: Cannot turn image named \"\(asset)\" into NSDataAsset")

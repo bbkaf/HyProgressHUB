@@ -11,6 +11,7 @@ import UIKit
 @objc public enum HyProgressType: Int {
     case simple
     case gif
+    case lottie
     case progressCircle
 }
 
@@ -47,7 +48,10 @@ import UIKit
     open var setMidBlurStyle: UIBlurEffectStyle = .light
     open var setMidBlurAlpha: CGFloat = 0.9
     open var setDynamicAlphaWithProgress: Bool = false
-
+    open var setLoadingLottie: UIView? = nil
+    open var setSuccessLottie: UIView? = nil
+    open var setFailLottie: UIView? = nil
+    
     ///internal property
     internal var type: HyProgressType = .simple
     internal var style: HyProgressStyle = .shadowBackground
@@ -61,9 +65,9 @@ import UIKit
     internal var littleSpinner = UIActivityIndicatorView(activityIndicatorStyle: .white)
     internal var midBlurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
     internal var showCircleProgressIndicator = false
+    internal var lottieAnimationView: UIView? = nil
     
     ///open property: progress persent
-    
     @objc public func setProgressPersent(in view: UIView?, persent: Double) {
         if let `view` = view {
             print(persent)
