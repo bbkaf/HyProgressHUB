@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA4D825E2110C5050052C46B /* HyDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D825D2110C5050052C46B /* HyDefine.swift */; };
 		DA8071AC20FBD4D700FAEFE5 /* HyProgressHUB.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8071AA20FBD4D700FAEFE5 /* HyProgressHUB.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA8071B420FBD50100FAEFE5 /* animat-checkmark-color.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA8071B220FBD50000FAEFE5 /* animat-checkmark-color.gif */; };
 		DA8071B520FBD50100FAEFE5 /* Spinner-1s-200px.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA8071B320FBD50100FAEFE5 /* Spinner-1s-200px.gif */; };
 		DA8071B820FBD50E00FAEFE5 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8071B620FBD50E00FAEFE5 /* UIImage+Gif.swift */; };
 		DAC192C221087A290058B1C8 /* HyProgressHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC192BF21087A290058B1C8 /* HyProgressHub.swift */; };
 		DAC192C321087A290058B1C8 /* HyProgressHub+Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC192C021087A290058B1C8 /* HyProgressHub+Dismiss.swift */; };
-		DAC192C421087A290058B1C8 /* HyProgressHub+ShowProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC192C121087A290058B1C8 /* HyProgressHub+ShowProgress.swift */; };
+		DAC192C421087A290058B1C8 /* HyProgressHub+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC192C121087A290058B1C8 /* HyProgressHub+Show.swift */; };
 		DAC192E9210892F90058B1C8 /* animat-pencil-color.gif in Resources */ = {isa = PBXBuildFile; fileRef = DAC192E8210892F90058B1C8 /* animat-pencil-color.gif */; };
 		DACDB3542108998600B7656E /* animat-rocket-color.gif in Resources */ = {isa = PBXBuildFile; fileRef = DACDB3532108998600B7656E /* animat-rocket-color.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA4D825D2110C5050052C46B /* HyDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyDefine.swift; sourceTree = "<group>"; };
 		DA8071A720FBD4D700FAEFE5 /* HyProgressHUB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HyProgressHUB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8071AA20FBD4D700FAEFE5 /* HyProgressHUB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HyProgressHUB.h; sourceTree = "<group>"; };
 		DA8071AB20FBD4D700FAEFE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,7 +29,7 @@
 		DA8071B620FBD50E00FAEFE5 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		DAC192BF21087A290058B1C8 /* HyProgressHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HyProgressHub.swift; sourceTree = "<group>"; };
 		DAC192C021087A290058B1C8 /* HyProgressHub+Dismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HyProgressHub+Dismiss.swift"; sourceTree = "<group>"; };
-		DAC192C121087A290058B1C8 /* HyProgressHub+ShowProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HyProgressHub+ShowProgress.swift"; sourceTree = "<group>"; };
+		DAC192C121087A290058B1C8 /* HyProgressHub+Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HyProgressHub+Show.swift"; sourceTree = "<group>"; };
 		DAC192E8210892F90058B1C8 /* animat-pencil-color.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animat-pencil-color.gif"; sourceTree = "<group>"; };
 		DACDB3532108998600B7656E /* animat-rocket-color.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animat-rocket-color.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,8 +72,9 @@
 				DA8071AB20FBD4D700FAEFE5 /* Info.plist */,
 				DA8071B620FBD50E00FAEFE5 /* UIImage+Gif.swift */,
 				DAC192BF21087A290058B1C8 /* HyProgressHub.swift */,
+				DA4D825D2110C5050052C46B /* HyDefine.swift */,
 				DAC192C021087A290058B1C8 /* HyProgressHub+Dismiss.swift */,
-				DAC192C121087A290058B1C8 /* HyProgressHub+ShowProgress.swift */,
+				DAC192C121087A290058B1C8 /* HyProgressHub+Show.swift */,
 			);
 			path = HyProgressHUB;
 			sourceTree = "<group>";
@@ -160,8 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA8071B820FBD50E00FAEFE5 /* UIImage+Gif.swift in Sources */,
+				DA4D825E2110C5050052C46B /* HyDefine.swift in Sources */,
 				DAC192C321087A290058B1C8 /* HyProgressHub+Dismiss.swift in Sources */,
-				DAC192C421087A290058B1C8 /* HyProgressHub+ShowProgress.swift in Sources */,
+				DAC192C421087A290058B1C8 /* HyProgressHub+Show.swift in Sources */,
 				DAC192C221087A290058B1C8 /* HyProgressHub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

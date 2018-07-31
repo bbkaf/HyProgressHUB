@@ -8,33 +8,23 @@
 
 import UIKit
 
-@objc public enum HyProgressType: Int {
-    case simple
-    case gif
-    case lottie
-    case progressCircle
-}
 
-@objc public enum HyProgressStyle: Int {
-    case shadowBackground
-    case blurBackground
-    case clear
-}
 
-@objc public enum DismissState: Int {
-    case success
-    case failure
-}
-
-@objc public class HyProgressHUB: NSObject {
+public class HyProgressHUB: UIView {
     
     public init(type: HyProgressType, style: HyProgressStyle) {
-        super.init()
+        let tempFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
+        super.init(frame: tempFrame)
         self.style = style
         self.type = type
     }
     
-    @objc public static let shared = HyProgressHUB(type: .progressCircle, style: .shadowBackground)
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //    @objc public static let shared = HyProgressHUB(type: .progressCircle, style: .shadowBackground)
     
     ///open setting properties
     open var setProgressLabel: Bool = false
@@ -66,7 +56,12 @@ import UIKit
     internal var midBlurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
     internal var showCircleProgressIndicator = false
     internal var lottieAnimationView: UIView? = nil
-    
+    internal var targetView: UIView? = nil
+    internal var progressImage = UIImageView()
+    internal var titleLabel = UILabel()
+    internal var innerProgressSlider = UIImageView()
+    internal var progressShapeLayer = CAShapeLayer()
+
     ///open property: progress persent
     @objc public func setProgressPersent(in view: UIView?, persent: Double) {
         if let `view` = view {
@@ -82,57 +77,35 @@ import UIKit
                     }
                 }
                 
-                for i in view.subviews {
-                    if self.setProgressLabel {
-                        if i.tag == 1700110033 {
-                            if let title = i as? UILabel {
-                                let progressInt = Int(persent * 100.0)
-                                title.text = "\(self.title ?? "")(\(progressInt)%)"
-                            }
-                        }
-                    }
-                    
-                    if self.setProgressSlider {
-                        if i.tag == 1700110035 {
-                            if let innerProgressSlider = i as? UIImageView {
-                                let progressInt = Int(persent * 100.0)
-                                let progressPersent = CGFloat(progressInt) / 100 * 106
-                                innerProgressSlider.frame = CGRect(x: view.center.x - 53, y: view.center.y + 56, width: progressPersent, height: 2.0)
-                            }
-                        }
-                    }
+                if self.setProgressLabel {
+                    let progressInt = Int(persent * 100.0)
+                    self.titleLabel.text = "\(self.title ?? "")(\(progressInt)%)"
+                }
+                
+                if self.setProgressSlider {
+                    let progressInt = Int(persent * 100.0)
+                    let progressPersent = CGFloat(progressInt) / 100 * 106
+                    self.innerProgressSlider.frame = CGRect(x: view.center.x - 53, y: view.center.y + 56, width: progressPersent, height: 2.0)
                 }
                 
                 if self.showCircleProgressIndicator {
-                    if view.layer.sublayers != nil {
-                        for i in view.layer.sublayers! {
-                            if i.name == "1700110036" {
-                                if let shapeLayer = i as? CAShapeLayer {
-                                    let progressInt = Int(persent * 100.0)
-                                    let circlePersent = Double(progressInt) / 100 * 2
-                                    
-                                    let center = CGPoint(x: view.center.x, y: view.center.y)
-                                    let radius = CGFloat(20)
-                                    let startAngle = CGFloat(-Double.pi * 0.5)
-                                    let endAngle = CGFloat(Double.pi * circlePersent - Double.pi * 0.5)
-                                    let path = UIBezierPath()
-                                    path.move(to: center)
-                                    path.addArc(withCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
-                                    path.close()
-                                    path.fill()
-                                    
-                                    let circlePath = UIBezierPath(arcCenter: CGPoint(x: view.center.x,y: view.center.y), radius: CGFloat(20), startAngle: CGFloat(-Double.pi * 0.5), endAngle:CGFloat(Double.pi * circlePersent), clockwise: true)
-                                    shapeLayer.path = path.cgPath
-                                }
-                            }
-                        }
-                    }
+                    let progressInt = Int(persent * 100.0)
+                    let circlePersent = Double(progressInt) / 100 * 2
+                    
+                    let center = CGPoint(x: view.center.x, y: view.center.y)
+                    let radius = CGFloat(20)
+                    let startAngle = CGFloat(-Double.pi * 0.5)
+                    let endAngle = CGFloat(Double.pi * circlePersent - Double.pi * 0.5)
+                    let path = UIBezierPath()
+                    path.move(to: center)
+                    path.addArc(withCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+                    path.close()
+                    path.fill()
+                    self.progressShapeLayer.path = path.cgPath
                 }
             }
         }
     }
-    
-    
 }
 
 
