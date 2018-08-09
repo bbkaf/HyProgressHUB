@@ -6,8 +6,24 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		DA62E10A211C229B00CB1FEC /* UniveralBuilder */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DA62E10B211C229B00CB1FEC /* Build configuration list for PBXAggregateTarget "UniveralBuilder" */;
+			buildPhases = (
+				DA62E10E211C22A800CB1FEC /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniveralBuilder;
+			productName = UniveralBuilder;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		DA4D825E2110C5050052C46B /* HyDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D825D2110C5050052C46B /* HyDefine.swift */; };
+		DA4D825E2110C5050052C46B /* HyProgressHubEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D825D2110C5050052C46B /* HyProgressHubEnums.swift */; };
+		DA4D82602110CE990052C46B /* HyProgressHub+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D825F2110CE990052C46B /* HyProgressHub+SetupUI.swift */; };
+		DA4D82622110CFC70052C46B /* HyProgressHub+SetProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D82612110CFC70052C46B /* HyProgressHub+SetProgress.swift */; };
 		DA8071AC20FBD4D700FAEFE5 /* HyProgressHUB.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8071AA20FBD4D700FAEFE5 /* HyProgressHUB.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA8071B420FBD50100FAEFE5 /* animat-checkmark-color.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA8071B220FBD50000FAEFE5 /* animat-checkmark-color.gif */; };
 		DA8071B520FBD50100FAEFE5 /* Spinner-1s-200px.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA8071B320FBD50100FAEFE5 /* Spinner-1s-200px.gif */; };
@@ -20,7 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DA4D825D2110C5050052C46B /* HyDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyDefine.swift; sourceTree = "<group>"; };
+		DA4D825D2110C5050052C46B /* HyProgressHubEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyProgressHubEnums.swift; sourceTree = "<group>"; };
+		DA4D825F2110CE990052C46B /* HyProgressHub+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HyProgressHub+SetupUI.swift"; sourceTree = "<group>"; };
+		DA4D82612110CFC70052C46B /* HyProgressHub+SetProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HyProgressHub+SetProgress.swift"; sourceTree = "<group>"; };
 		DA8071A720FBD4D700FAEFE5 /* HyProgressHUB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HyProgressHUB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8071AA20FBD4D700FAEFE5 /* HyProgressHUB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HyProgressHUB.h; sourceTree = "<group>"; };
 		DA8071AB20FBD4D700FAEFE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,10 +89,12 @@
 				DA8071AA20FBD4D700FAEFE5 /* HyProgressHUB.h */,
 				DA8071AB20FBD4D700FAEFE5 /* Info.plist */,
 				DA8071B620FBD50E00FAEFE5 /* UIImage+Gif.swift */,
+				DA4D825D2110C5050052C46B /* HyProgressHubEnums.swift */,
 				DAC192BF21087A290058B1C8 /* HyProgressHub.swift */,
-				DA4D825D2110C5050052C46B /* HyDefine.swift */,
-				DAC192C021087A290058B1C8 /* HyProgressHub+Dismiss.swift */,
+				DA4D825F2110CE990052C46B /* HyProgressHub+SetupUI.swift */,
 				DAC192C121087A290058B1C8 /* HyProgressHub+Show.swift */,
+				DA4D82612110CFC70052C46B /* HyProgressHub+SetProgress.swift */,
+				DAC192C021087A290058B1C8 /* HyProgressHub+Dismiss.swift */,
 			);
 			path = HyProgressHUB;
 			sourceTree = "<group>";
@@ -120,6 +140,9 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = HyerTech;
 				TargetAttributes = {
+					DA62E10A211C229B00CB1FEC = {
+						CreatedOnToolsVersion = 9.3;
+					};
 					DA8071A620FBD4D700FAEFE5 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
@@ -139,6 +162,7 @@
 			projectRoot = "";
 			targets = (
 				DA8071A620FBD4D700FAEFE5 /* HyProgressHUB */,
+				DA62E10A211C229B00CB1FEC /* UniveralBuilder */,
 			);
 		};
 /* End PBXProject section */
@@ -157,14 +181,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DA62E10E211C22A800CB1FEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Merge Script\n\n# 1\n# Set bash script to exit immediately if any commands fail.\nset -e\n\n# 2\n# Setup some constants for use later on.\nFRAMEWORK_NAME=\"HyProgressHUB\"\n\n# 3\n# If remnants from a previous build exist, delete them.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi\n\n# 4\n# Build the framework for device and for simulator (using\n# all needed architectures).\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch arm64 -arch armv7 -arch armv7s only_active_arch=no defines_module=yes -sdk \"iphoneos\"\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch x86_64 -arch i386 only_active_arch=no defines_module=yes -sdk \"iphonesimulator\"\n\n# 5\n# Remove .framework file if exists on Desktop from previous run.\nif [ -d \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\nfi\n\n# 6\n# Copy the device version of framework to Desktop.\ncp -r \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\n\n# 7\n# Replace the framework executable within the framework with\n# a new version created by merging the device and simulator\n# frameworks' executables with lipo.\nlipo -create -output \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n# 8\n# Copy the Swift module mappings for the simulator into the\n# framework.  The device mappings already exist from step 6.\ncp -r \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\n\n# 9\n# Delete the most recent build.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DA8071A220FBD4D700FAEFE5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DA8071B820FBD50E00FAEFE5 /* UIImage+Gif.swift in Sources */,
-				DA4D825E2110C5050052C46B /* HyDefine.swift in Sources */,
+				DA4D825E2110C5050052C46B /* HyProgressHubEnums.swift in Sources */,
 				DAC192C321087A290058B1C8 /* HyProgressHub+Dismiss.swift in Sources */,
+				DA4D82602110CE990052C46B /* HyProgressHub+SetupUI.swift in Sources */,
+				DA4D82622110CFC70052C46B /* HyProgressHub+SetProgress.swift in Sources */,
 				DAC192C421087A290058B1C8 /* HyProgressHub+Show.swift in Sources */,
 				DAC192C221087A290058B1C8 /* HyProgressHub.swift in Sources */,
 			);
@@ -173,6 +215,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		DA62E10C211C229B00CB1FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KU48Y2UB6V;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DA62E10D211C229B00CB1FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KU48Y2UB6V;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		DA8071AD20FBD4D700FAEFE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -315,6 +375,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fembed-bitcode-marker";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyer.real.HyProgressHUB;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -357,6 +418,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DA62E10B211C229B00CB1FEC /* Build configuration list for PBXAggregateTarget "UniveralBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA62E10C211C229B00CB1FEC /* Debug */,
+				DA62E10D211C229B00CB1FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DA8071A120FBD4D700FAEFE5 /* Build configuration list for PBXProject "HyProgressHUB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
