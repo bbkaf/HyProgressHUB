@@ -63,10 +63,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DA80719D20FBD4D700FAEFE5 = {
+		DA307A0C211D990200FF8E09 /* demo gif */ = {
 			isa = PBXGroup;
 			children = (
 				DAC192E8210892F90058B1C8 /* animat-pencil-color.gif */,
+				DACDB3532108998600B7656E /* animat-rocket-color.gif */,
+				DA8071B220FBD50000FAEFE5 /* animat-checkmark-color.gif */,
+				DA8071B320FBD50100FAEFE5 /* Spinner-1s-200px.gif */,
+			);
+			path = "demo gif";
+			sourceTree = "<group>";
+		};
+		DA80719D20FBD4D700FAEFE5 = {
+			isa = PBXGroup;
+			children = (
 				DA8071A920FBD4D700FAEFE5 /* HyProgressHUB */,
 				DA8071A820FBD4D700FAEFE5 /* Products */,
 			);
@@ -83,9 +93,7 @@
 		DA8071A920FBD4D700FAEFE5 /* HyProgressHUB */ = {
 			isa = PBXGroup;
 			children = (
-				DACDB3532108998600B7656E /* animat-rocket-color.gif */,
-				DA8071B220FBD50000FAEFE5 /* animat-checkmark-color.gif */,
-				DA8071B320FBD50100FAEFE5 /* Spinner-1s-200px.gif */,
+				DA307A0C211D990200FF8E09 /* demo gif */,
 				DA8071AA20FBD4D700FAEFE5 /* HyProgressHUB.h */,
 				DA8071AB20FBD4D700FAEFE5 /* Info.plist */,
 				DA8071B620FBD50E00FAEFE5 /* UIImage+Gif.swift */,
