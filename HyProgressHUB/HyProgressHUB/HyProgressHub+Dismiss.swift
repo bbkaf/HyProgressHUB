@@ -78,7 +78,6 @@ extension HyProgressHUB {
                 }
             }
             
-            let mircoSec = Int(after * 1000)
             let deadlineTime = DispatchTime.now() + after
             DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
                 view.isUserInteractionEnabled = true
