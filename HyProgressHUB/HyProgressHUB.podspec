@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/bbkaf/HyProgressHUB.git", :tag => "1.0.0" }
   s.frameworks   = 'Foundation','UIKit','ImageIO'
   s.source_files = "HyProgressHUB/**/*"
-  s.exclude_files = "HyProgressHUB/HyProgressHUB/demo\ gif/*.gif"
-s.resources = "HyProgressHUB/HyProgressHUB/demo\ gif/*.gif"
+  s.exclude_files = "HyProgressHUB/HyProgressHUB/demo gif/*"
+s.resources = 'HyProgressHUB/HyProgressHUB/*.{png,jpg,bundle}'
 
 end
