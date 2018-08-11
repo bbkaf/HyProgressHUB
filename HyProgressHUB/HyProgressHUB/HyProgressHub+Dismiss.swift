@@ -39,7 +39,7 @@ extension HyProgressHUB {
     /// - parameter after: Dismiss HyProgressHUB after few second
     /// - parameter complete: Call back after HyProgressHUB Dismissed
     @objc public func dismiss(in view: UIView?, with state: DismissState = .success, after: Double = 0.0, complete: (() -> Void)? = nil) {
-
+        
         if let `view` = view {
             self.frame = view.frame
             DispatchQueue.main.async {
@@ -89,3 +89,4 @@ extension HyProgressHUB {
         }
     }
 }
+
