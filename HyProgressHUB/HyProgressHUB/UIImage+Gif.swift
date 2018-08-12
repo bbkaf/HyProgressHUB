@@ -62,7 +62,7 @@ internal extension UIImage {
     internal class func gif(name: String, bundle: Bundle) -> UIImage? {
         guard let bundleURL = bundle
             .url(forResource: name, withExtension: "gif") else {
-                print("SwiftGif: This image named \"\(name)\" does not exist")
+                print("SwiftGif: This image named \"\(name)\" does not exist gif(name: String, bundle: Bundle)")
                 return nil
         }
         
@@ -78,7 +78,7 @@ internal extension UIImage {
         // Check for existance of gif.main.url
         guard let bundleURL = Bundle.main
             .url(forResource: name, withExtension: "gif") else {
-                print("SwiftGif: This image named \"\(name)\" does not exist")
+                print("SwiftGif: This image named \"\(name)\" does not exist gif(name: String)")
                 return nil
         }
         

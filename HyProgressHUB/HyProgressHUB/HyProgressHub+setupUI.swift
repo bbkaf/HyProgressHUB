@@ -37,7 +37,9 @@ extension HyProgressHUB {
             progressImage.image = UIImage.gif(name: setLoadingGif!)
             progressImage.frame = CGRect(x: self.center.x - setIconWidth/2, y: self.center.y - setIconHeight/2, width: setIconWidth, height: setIconHeight)
         } else {
-            progressImage.image = UIImage.gif(name: "animat-pencil-color", bundle: Bundle(for: HyProgressHUB.self))
+            let path = Bundle(for: HyProgressHUB.self).resourcePath! + "/demoGif.bundle"
+            
+            progressImage.image = UIImage.gif(name: "animat-pencil-color", bundle: Bundle(path: path)!)
             progressImage.frame = CGRect(x: self.center.x - setIconWidth/2, y: self.center.y - setIconHeight/2, width: setIconWidth, height: setIconHeight)
         }
     }
@@ -48,7 +50,8 @@ extension HyProgressHUB {
             lottieAnimationView = setLoadingLottie
             lottieAnimationView?.frame = CGRect(x: self.center.x - setIconWidth/2, y: self.center.y - setIconHeight/2, width: setIconWidth, height: setIconHeight)
         } else {
-            progressImage.image = UIImage.gif(name: "animat-rocket-color", bundle: Bundle(for: HyProgressHUB.self))
+            let path = Bundle(for: HyProgressHUB.self).resourcePath! + "/demoGif.bundle"
+            progressImage.image = UIImage.gif(name: "animat-rocket-color", bundle: Bundle(path: path)!)
             progressImage.frame = CGRect(x: self.center.x - setIconWidth/2, y: self.center.y - setIconHeight/2, width: setIconWidth, height: setIconHeight)
         }
     }

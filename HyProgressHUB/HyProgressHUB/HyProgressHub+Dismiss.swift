@@ -41,6 +41,7 @@ extension HyProgressHUB {
     @objc public func dismiss(in view: UIView?, with state: DismissState = .success, after: Double = 0.0, complete: (() -> Void)? = nil) {
         
         if let `view` = view {
+//            view.isUserInteractionEnabled = true
             self.frame = view.frame
             DispatchQueue.main.async {
                 if state == .success {
