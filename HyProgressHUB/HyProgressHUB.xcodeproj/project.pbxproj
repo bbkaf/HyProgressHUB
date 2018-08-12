@@ -33,9 +33,12 @@
 		DAC192C421087A290058B1C8 /* HyProgressHub+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC192C121087A290058B1C8 /* HyProgressHub+Show.swift */; };
 		DAC192E9210892F90058B1C8 /* animat-pencil-color.gif in Resources */ = {isa = PBXBuildFile; fileRef = DAC192E8210892F90058B1C8 /* animat-pencil-color.gif */; };
 		DACDB3542108998600B7656E /* animat-rocket-color.gif in Resources */ = {isa = PBXBuildFile; fileRef = DACDB3532108998600B7656E /* animat-rocket-color.gif */; };
+		DE6504A547F05DE076DFD4E9 /* Pods_HyProgressHUB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D62C4A753474A572E5AE020 /* Pods_HyProgressHUB.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D62C4A753474A572E5AE020 /* Pods_HyProgressHUB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyProgressHUB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D58D853B72CE772E4E811F07 /* Pods-HyProgressHUB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyProgressHUB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HyProgressHUB/Pods-HyProgressHUB.debug.xcconfig"; sourceTree = "<group>"; };
 		DA4D825D2110C5050052C46B /* HyProgressHubEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyProgressHubEnums.swift; sourceTree = "<group>"; };
 		DA4D825F2110CE990052C46B /* HyProgressHub+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HyProgressHub+SetupUI.swift"; sourceTree = "<group>"; };
 		DA4D82612110CFC70052C46B /* HyProgressHub+SetProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HyProgressHub+SetProgress.swift"; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 		DAC192C121087A290058B1C8 /* HyProgressHub+Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HyProgressHub+Show.swift"; sourceTree = "<group>"; };
 		DAC192E8210892F90058B1C8 /* animat-pencil-color.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animat-pencil-color.gif"; sourceTree = "<group>"; };
 		DACDB3532108998600B7656E /* animat-rocket-color.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animat-rocket-color.gif"; sourceTree = "<group>"; };
+		EE84AC8BDC51E84E1E941A8E /* Pods-HyProgressHUB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyProgressHUB.release.xcconfig"; path = "Pods/Target Support Files/Pods-HyProgressHUB/Pods-HyProgressHUB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,13 +61,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE6504A547F05DE076DFD4E9 /* Pods_HyProgressHUB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DA307A0C211D990200FF8E09 /* demoGif */ = {
+		3664628D9F8771794A504ABD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D58D853B72CE772E4E811F07 /* Pods-HyProgressHUB.debug.xcconfig */,
+				EE84AC8BDC51E84E1E941A8E /* Pods-HyProgressHUB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9ED563063030B2D8B772525E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D62C4A753474A572E5AE020 /* Pods_HyProgressHUB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA307A0C211D990200FF8E09 /* demoGif.bundle */ = {
 			isa = PBXGroup;
 			children = (
 				DAC192E8210892F90058B1C8 /* animat-pencil-color.gif */,
@@ -71,7 +93,7 @@
 				DA8071B220FBD50000FAEFE5 /* animat-checkmark-color.gif */,
 				DA8071B320FBD50100FAEFE5 /* Spinner-1s-200px.gif */,
 			);
-			path = demoGif;
+			path = demoGif.bundle;
 			sourceTree = "<group>";
 		};
 		DA80719D20FBD4D700FAEFE5 = {
@@ -79,6 +101,8 @@
 			children = (
 				DA8071A920FBD4D700FAEFE5 /* HyProgressHUB */,
 				DA8071A820FBD4D700FAEFE5 /* Products */,
+				3664628D9F8771794A504ABD /* Pods */,
+				9ED563063030B2D8B772525E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,7 +117,7 @@
 		DA8071A920FBD4D700FAEFE5 /* HyProgressHUB */ = {
 			isa = PBXGroup;
 			children = (
-				DA307A0C211D990200FF8E09 /* demoGif */,
+				DA307A0C211D990200FF8E09 /* demoGif.bundle */,
 				DA8071AA20FBD4D700FAEFE5 /* HyProgressHUB.h */,
 				DA8071AB20FBD4D700FAEFE5 /* Info.plist */,
 				DA8071B620FBD50E00FAEFE5 /* UIImage+Gif.swift */,
@@ -125,6 +149,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA8071AF20FBD4D700FAEFE5 /* Build configuration list for PBXNativeTarget "HyProgressHUB" */;
 			buildPhases = (
+				A8BB9FB83FF78E575A941882 /* [CP] Check Pods Manifest.lock */,
 				DA8071A220FBD4D700FAEFE5 /* Sources */,
 				DA8071A320FBD4D700FAEFE5 /* Frameworks */,
 				DA8071A420FBD4D700FAEFE5 /* Headers */,
@@ -190,6 +215,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A8BB9FB83FF78E575A941882 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HyProgressHUB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DA62E10E211C22A800CB1FEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +408,7 @@
 		};
 		DA8071B020FBD4D700FAEFE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D58D853B72CE772E4E811F07 /* Pods-HyProgressHUB.debug.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = marker;
 				CLANG_ENABLE_MODULES = YES;
@@ -396,6 +440,7 @@
 		};
 		DA8071B120FBD4D700FAEFE5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE84AC8BDC51E84E1E941A8E /* Pods-HyProgressHUB.release.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
 				CLANG_ENABLE_MODULES = YES;
