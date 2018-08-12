@@ -29,6 +29,7 @@ extension HyProgressHUB {
                 self.setProgressStyle()
                 self.setProgressType()
                 if !isAdded {
+                    self.isUserInteractionEnabled = false
                     view.addSubview(self)
                 }
                 
