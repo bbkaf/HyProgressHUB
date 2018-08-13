@@ -45,7 +45,7 @@ extension HyProgressHUB {
     }
     
     internal func setLottie() {
-        ///lottie
+        ///lotti e
         if setLoadingLottie != nil {
             lottieAnimationView = setLoadingLottie
             lottieAnimationView?.frame = CGRect(x: self.center.x - setIconWidth/2, y: self.center.y - setIconHeight/2, width: setIconWidth, height: setIconHeight)
