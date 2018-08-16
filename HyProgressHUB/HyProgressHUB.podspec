@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
 #s.exclude_files = "HyProgressHUB/**/*.gif"
 s.resources = 'HyProgressHUB/**/*.gif'
 #s.resource_bundles = {
-'demoGif' => ['HyProgressHUB/**/*.gif']
-}
+#'demoGif' => ['HyProgressHUB/**/*.gif']
+#}
 end

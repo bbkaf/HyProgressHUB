@@ -27,7 +27,7 @@ extension HyProgressHUB {
             
             
             setTheProgressSlider()
-            setTheProgressCircle()
+            setTheProgressPie()
         }
     }
     
@@ -37,21 +37,19 @@ extension HyProgressHUB {
             progressImage.image = UIImage.gif(name: setLoadingGif!)
             progressImage.frame = CGRect(x: self.center.x - setIconWidth/2, y: self.center.y - setIconHeight/2, width: setIconWidth, height: setIconHeight)
         } else {
-            let path = Bundle(for: HyProgressHUB.self).resourcePath! + "/demoGif.bundle"
-            
+//            let path = Bundle(for: HyProgressHUB.self).resourcePath! + "/demoGif.bundle"
             progressImage.image = UIImage.gif(name: "animat-pencil-color", bundle: Bundle(for: HyProgressHUB.self))
             progressImage.frame = CGRect(x: self.center.x - setIconWidth/2, y: self.center.y - setIconHeight/2, width: setIconWidth, height: setIconHeight)
         }
     }
     
     internal func setLottie() {
-        ///lotti e
+        ///lottie
         if setLoadingLottie != nil {
             lottieAnimationView = setLoadingLottie
             lottieAnimationView?.frame = CGRect(x: self.center.x - setIconWidth/2, y: self.center.y - setIconHeight/2, width: setIconWidth, height: setIconHeight)
         } else {
-            let a = Bundle(for: HyProgressHUB.self)
-            let path = Bundle(for: HyProgressHUB.self).resourcePath! + "/demoGif.bundle"
+//            let path = Bundle(for: HyProgressHUB.self).resourcePath! + "/demoGif.bundle"
             progressImage.image = UIImage.gif(name: "animat-rocket-color", bundle: Bundle(for: HyProgressHUB.self))
             progressImage.frame = CGRect(x: self.center.x - setIconWidth/2, y: self.center.y - setIconHeight/2, width: setIconWidth, height: setIconHeight)
         }
@@ -71,7 +69,7 @@ extension HyProgressHUB {
         
     }
     
-    internal func setTheProgressCircle() {
+    internal func setTheProgressPie() {
         ///progressCircle inner
         let center = CGPoint(x: self.center.x, y: self.center.y)
         let radius = CGFloat(20)
@@ -86,19 +84,28 @@ extension HyProgressHUB {
         progressShapeLayer.path = path.cgPath
         
         //change the fill color
-        progressShapeLayer.fillColor = UIColor.lightGray.cgColor
-        //you can change the stroke color
-        progressShapeLayer.strokeColor = UIColor.lightGray.cgColor
-        //you can change the line width
-        progressShapeLayer.lineWidth = 0.0
+        if self.setBackgroundBlurStyle == .dark {
+            progressShapeLayer.fillColor = UIColor.lightGray.cgColor
+            //you can change the stroke color
+            progressShapeLayer.strokeColor = UIColor.lightGray.cgColor
+            //you can change the line width
+            progressShapeLayer.lineWidth = 0.0
+        } else {
+            progressShapeLayer.fillColor = UIColor.white.withAlphaComponent(0.85).cgColor
+            //you can change the stroke color
+            progressShapeLayer.strokeColor = UIColor.white.withAlphaComponent(0.85).cgColor
+            //you can change the line width
+            progressShapeLayer.lineWidth = 0.0
+        }
+        
         
         ///progressCircle outer
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: self.center.x,y: self.center.y), radius: CGFloat(20), startAngle: CGFloat(-Double.pi * 0.5), endAngle:CGFloat(Double.pi * 1.5), clockwise: true)
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: self.center.x,y: self.center.y), radius: CGFloat(22), startAngle: CGFloat(-Double.pi * 0.5), endAngle:CGFloat(Double.pi * 1.5), clockwise: true)
         progressShapeOuterLayer = CAShapeLayer()
         progressShapeOuterLayer.path = circlePath.cgPath
-        progressShapeOuterLayer.fillColor = UIColor.clear.cgColor
-        progressShapeOuterLayer.strokeColor = UIColor.lightGray.cgColor
-        progressShapeOuterLayer.lineWidth = 1.0
+        progressShapeOuterLayer.fillColor = UIColor.black.withAlphaComponent(0.4).cgColor
+        progressShapeOuterLayer.strokeColor = UIColor.black.withAlphaComponent(0.4).cgColor
+        progressShapeOuterLayer.lineWidth = 0
     }
     
     internal func setTheProgressSlider() {
@@ -163,8 +170,9 @@ extension HyProgressHUB {
             }
         case .progressCircle:
             self.showCircleProgressIndicator = true
-            self.layer.addSublayer(self.progressShapeLayer)
             self.layer.addSublayer(self.progressShapeOuterLayer)
+            self.layer.addSublayer(self.progressShapeLayer)
+            
         }
         
         ///customer setting
