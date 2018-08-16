@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,10 +16,10 @@
 		089A7E1CE53600F60744AFFA95240A83 /* Pods-HyProgressHUB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HyProgressHUB-dummy.m"; sourceTree = "<group>"; };
 		15AFDB388438D01D99F713A49B0E3FC3 /* Pods-HyProgressHUB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HyProgressHUB.release.xcconfig"; sourceTree = "<group>"; };
 		38800B39767301E400EEB50C5A5F8AD7 /* Pods-HyProgressHUB-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HyProgressHUB-umbrella.h"; sourceTree = "<group>"; };
-		3DF4F87735B15D30765DEB6E794AB0A3 /* Pods_HyProgressHUB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HyProgressHUB.framework; path = "Pods-HyProgressHUB.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DF4F87735B15D30765DEB6E794AB0A3 /* Pods_HyProgressHUB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyProgressHUB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5C3AC74A559099B15506E0C11307A684 /* Pods-HyProgressHUB-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HyProgressHUB-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		97E651948955F0A6C6B914D1CB8FBFB5 /* Pods-HyProgressHUB-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HyProgressHUB-resources.sh"; sourceTree = "<group>"; };
 		9D4945B1E4C3CE65993D788DD33B5A66 /* Pods-HyProgressHUB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HyProgressHUB.debug.xcconfig"; sourceTree = "<group>"; };
 		C856ADB4C64FE72B968BCCBF8D29CCB7 /* Pods-HyProgressHUB-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HyProgressHUB-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -247,11 +247,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-HyProgressHUB/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-HyProgressHUB/Pods-HyProgressHUB.modulemap";
 				OTHER_LDFLAGS = "";
@@ -284,11 +280,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-HyProgressHUB/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-HyProgressHUB/Pods-HyProgressHUB.modulemap";
 				OTHER_LDFLAGS = "";
