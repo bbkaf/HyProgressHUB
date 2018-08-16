@@ -8,9 +8,9 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "Hank" => "bbkaf@hotmail.com" }
   s.platform     = :ios, "9.0"
-  s.source       = { :git => "https://github.com/bbkaf/HyProgressHUB.git", :tag => "1.0.9" }
+  s.source       = { :git => "https://github.com/bbkaf/HyProgressHUB.git", :tag => s.version }
   s.frameworks   = 'Foundation','UIKit','ImageIO'
-  s.source_files = "HyProgressHUB/**/*"
+  s.source_files = "HyProgressHUB/**/*.swift"
 #s.exclude_files = "HyProgressHUB/**/*.gif"
 s.resources = 'HyProgressHUB/**/*.gif'
 #s.resource_bundles = {
